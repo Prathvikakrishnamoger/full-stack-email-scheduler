@@ -13,15 +13,15 @@ let senderEmails = [];
 function createTransport(user, pass) {
   return nodemailer.createTransport({
     host: 'smtp.ethereal.email',
-    port: 587,
-    secure: false,
+    port: 465,
+    secure: true,
     auth: { user, pass },
     pool: true,
-    maxConnections: 3,
-    maxMessages: 50,
-    connectionTimeout: 10000,
-    greetingTimeout: 10000,
-    socketTimeout: 15000,
+    maxConnections: 2,
+    maxMessages: 30,
+    connectionTimeout: 30000,
+    greetingTimeout: 30000,
+    socketTimeout: 30000,
     tls: { rejectUnauthorized: false }
   });
 }
