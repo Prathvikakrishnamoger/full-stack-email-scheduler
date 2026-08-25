@@ -24,6 +24,14 @@ async function main() {
   app.use(cors({ origin: true, credentials: true }));
   app.use(morgan('dev'));
   app.use(express.json());
+  
+  // Root route
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Email Scheduler API is running',
+    status: 'ok'
+  });
+});
 
   // Health check
   app.get('/api/health', (req, res) => {
