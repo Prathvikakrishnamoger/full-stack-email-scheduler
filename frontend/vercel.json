@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "BACKEND_URL_PLACEHOLDER/api/$1" }
+    { "source": "/api/(.*)", "destination": "https://email-scheduler-api-59kd.onrender.com/api/$1" }
   ]
 }
